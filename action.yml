@@ -1,5 +1,5 @@
 name: Major Version Sync
-description: Syncs the major version tag with the current tag.
+description: Syncs the major version tag with the new tag.
 
 branding:
   icon: tag

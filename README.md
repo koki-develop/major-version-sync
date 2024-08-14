@@ -4,7 +4,7 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/koki-develop/major-version-sync/ci.yml?branch=main&logo=github&style=flat&label=ci)](https://github.com/koki-develop/major-version-sync/actions/workflows/ci.yml)
 [![Build](https://img.shields.io/github/actions/workflow/status/koki-develop/major-version-sync/build.yml?branch=main&logo=github&style=flat&label=build)](https://github.com/koki-develop/major-version-sync/actions/workflows/build.yml)
 
-Syncs the major version tag with the current tag.
+Syncs the major version tag with the new tag.
 
 ## Usage
 
