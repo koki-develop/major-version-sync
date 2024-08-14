@@ -12,3 +12,5 @@ jobs:
       contents: write
     steps:
       - uses: ./
+        with:
+          token: ${{ github.token }}
