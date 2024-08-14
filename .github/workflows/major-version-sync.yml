@@ -11,6 +11,7 @@ jobs:
     permissions:
       contents: write
     steps:
+      - uses: actions/checkout@v4
       - uses: ./
         with:
           token: ${{ github.token }}
