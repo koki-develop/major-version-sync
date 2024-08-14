@@ -4,7 +4,8 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/koki-develop/major-version-sync/ci.yml?branch=main&logo=github&style=flat&label=ci)](https://github.com/koki-develop/major-version-sync/actions/workflows/ci.yml)
 [![Build](https://img.shields.io/github/actions/workflow/status/koki-develop/major-version-sync/build.yml?branch=main&logo=github&style=flat&label=build)](https://github.com/koki-develop/major-version-sync/actions/workflows/build.yml)
 
-Syncs the major version tag with the new tag.
+This Action automatically syncs the major version tag when a semantic versioning tag is pushed.  
+For example, when you push a tag like `v1.2.3`, it will create or update a `v1` tag pointing to the same commit.
 
 ## Usage
 
