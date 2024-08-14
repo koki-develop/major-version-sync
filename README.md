@@ -1,11 +1,30 @@
-# ts-action-template
+# major-version-sync
 
-[![GitHub Release](https://img.shields.io/github/v/release/koki-develop/ts-action-template)](https://github.com/koki-develop/ts-action-template/releases/latest)
-[![CI](https://img.shields.io/github/actions/workflow/status/koki-develop/ts-action-template/ci.yml?branch=main&logo=github&style=flat&label=ci)](https://github.com/koki-develop/ts-action-template/actions/workflows/ci.yml)
-[![Build](https://img.shields.io/github/actions/workflow/status/koki-develop/ts-action-template/build.yml?branch=main&logo=github&style=flat&label=build)](https://github.com/koki-develop/ts-action-template/actions/workflows/build.yml)
+[![GitHub Release](https://img.shields.io/github/v/release/koki-develop/major-version-sync)](https://github.com/koki-develop/major-version-sync/releases/latest)
+[![CI](https://img.shields.io/github/actions/workflow/status/koki-develop/major-version-sync/ci.yml?branch=main&logo=github&style=flat&label=ci)](https://github.com/koki-develop/major-version-sync/actions/workflows/ci.yml)
+[![Build](https://img.shields.io/github/actions/workflow/status/koki-develop/major-version-sync/build.yml?branch=main&logo=github&style=flat&label=build)](https://github.com/koki-develop/major-version-sync/actions/workflows/build.yml)
 
-This is a template for creating GitHub Actions in TypeScript.
+Syncs the major version tag with the current tag.
 
-# LICENSE
+## Usage
+
+```yaml
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  major-version-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: koki-develop/major-version-sync@v1
+        with:
+          token: ${{ github.token }}
+```
+
+## LICENSE
 
 [MIT](./LICENSE)
