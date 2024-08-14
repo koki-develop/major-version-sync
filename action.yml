@@ -1,20 +1,20 @@
-name: Hello World
-description: Greet someone and record the time
+name: Major Version Sync
+description: Syncs the major version tag with the current tag.
 
 branding:
   icon: send
   color: white
 
 inputs:
-  message:
+  token:
     description: |-
-      The message to echo.
+      The GitHub token to use for pushing the tag.
     required: false
-    default: "Hello, world!"
+    default: ${{ github.token }}
 
 outputs:
-  message:
-    description: The message that was echoed.
+  tag:
+    description: The major version tag.
 
 runs:
   using: node20
