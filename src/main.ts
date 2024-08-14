@@ -21,18 +21,15 @@ export const main = async () => {
     }
     const majorTag = extractMajorTag(ref.name);
     core.setOutput("tag", majorTag);
-    core.info(`Tag ${majorTag} will be synced with ${context.sha}`);
 
     const exists = await github.isTagExists(majorTag);
     if (exists) {
       // Update
-      core.info(`Tag ${majorTag} already exists`);
       core.info(`Updating tag ${majorTag} to ${context.sha}`);
       await github.updateTag({ tag: majorTag, sha: context.sha });
       core.info("Tag updated successfully");
     } else {
       // Create
-      core.info(`Tag ${majorTag} does not exist`);
       core.info(`Creating tag ${majorTag} at ${context.sha}`);
       await github.createTag({ tag: majorTag, sha: context.sha });
       core.info("Tag created successfully");
