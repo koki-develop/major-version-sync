@@ -2,8 +2,8 @@ name: Major Version Sync
 description: Syncs the major version tag with the current tag.
 
 branding:
-  icon: send
-  color: white
+  icon: tag
+  color: gray-dark
 
 inputs:
   token:
