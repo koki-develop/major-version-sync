@@ -27,7 +27,7 @@
     "@vercel/ncc": "0.38.1",
     "husky": "9.1.4",
     "lint-staged": "15.2.8",
-    "typescript": "5.5.4",
+    "typescript": "5.9.3",
     "vitest": "2.1.9"
   }
 }
