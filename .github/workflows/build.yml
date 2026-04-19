@@ -15,7 +15,7 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
       - uses: ./.github/actions/setup
       - run: bun run build
 
@@ -25,7 +25,7 @@ jobs:
           git add ./dist
           git diff --quiet --exit-code --staged ./dist
 
-      - uses: peter-evans/create-pull-request@v6
+      - uses: peter-evans/create-pull-request@c5a7806660adbe173f04e3e038b0ccdcd758773c # v6.1.0
         if: ${{ failure() && steps.check.outcome == 'failure' }}
         with:
           token: ${{ github.token }}
